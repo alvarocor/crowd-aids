@@ -1,0 +1,27 @@
+{
+  "name": "demo-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crowdaids-data": "file:../crowdaids-data",
+    "crowdaids-errors": "file:../crowdaids-errors",
+    "crowdaids-logic": "file:../crowdaids-logic",
+    "dotenv": "^10.0.0",
+    "errors": "file:../errors",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
