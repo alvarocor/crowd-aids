@@ -1,0 +1,40 @@
+/* ----- spinner ----- */ 
+
+.circulo1
+    fill: rgb(68, 68, 68)
+    animation: miAnimacion 1.5s alternate infinite
+
+.circulo3
+    fill: rgb(97, 97, 97)
+    animation: miAnimacion 1.5s alternate infinite
+
+.circulo2
+    fill: rgb(136, 136, 136)
+    animation: miAnimacion 1.5s alternate infinite
+
+.circulo4
+    fill: rgb(184, 184, 184)
+    animation: miAnimacion 1.5s alternate infinite
+
+.spinner
+    background-color: black
+    height: 100%
+    width: 100vw
+    top: -15px
+    left: -10px
+    opacity: 0.6
+    position: fixed
+    z-index: 1
+    color: rgb(161, 161, 161)
+
+#spinner
+    animation: rotate-out 0.8s linear infinite
+    transform-origin: center
+    transform-box: fill-box
+
+@keyframes rotate-out
+    0%
+        transform: rotate(0deg)
+
+    100%
+        transform: rotate(180deg)

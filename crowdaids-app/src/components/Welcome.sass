@@ -1,0 +1,38 @@
+.center--welcome
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.image--welcome
+    width: 400px
+    padding-top: 20px
+
+.recommended-beach:hover
+    color: black
+    cursor: pointer
+
+.recommended-beach
+    display: flex
+    flex-direction: column
+    padding: 15px 0 15px 0
+    font-size: 1.1rem
+    font-weight: 600
+    color: grey
+
+@media screen and (min-width: 960px)
+    .image--welcome
+        padding: 0
+        width: 665px
+
+    .center--welcome
+        flex-direction: row
+
+    .recommended
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        margin: 50px
+
+    .recommended-beach
+        padding: 32px 0 32px 0
+        flex-direction: row

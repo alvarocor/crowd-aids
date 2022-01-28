@@ -1,0 +1,79 @@
+@import ../style
+
+.main--elements
+    margin: 10px
+    font-size: 0.8rem
+
+.grid__center-main
+    display: flex
+    flex-direction: column
+    box-shadow: 0px 1px 10px $ligth-blue-ligth
+    
+.main--elements
+    margin: 10px
+    font-size: 1rem
+
+/* ------ tablet result forecast 24 hours ------ */
+    
+.titles--for
+    display: flex
+    justify-content: space-around
+    font-size: 0.8rem
+
+.list--day
+    display: flex
+    flex-direction: column
+
+.list--data
+    display: flex
+    justify-content: space-between
+    align-content: space-between
+    align-items: baseline
+    gap: 10px 20px
+    padding-left: 10px
+
+@media screen and (min-width: 960px)
+    .grid__center-main
+        padding: 10px
+        box-shadow: 0px 1px 10px $ligth-blue-ligth
+
+    /* ------ tablet result forecast 24 hours ------ */
+
+    .titles--for
+        display: flex
+        width: 958px
+        align-items: center
+        font-size: 1rem
+        & :nth-child(1)
+            width: 115px
+        & :nth-child(2)
+            width: 155px
+        & :nth-child(3)
+            width: 215px
+        & :nth-child(4)
+            width: 230px
+        & :nth-child(5)
+            width: 200px
+        & :nth-child(6)
+            width: 80px
+            
+    .list--day
+        flex-direction: column
+
+    .list--data
+        justify-content: space-evenly
+        width: 958px
+        gap: 10px 20px
+        font-size: 1.1rem
+        & :nth-child(1)
+            width: 80px
+        & :nth-child(2)
+            width: 130px
+        & :nth-child(3)
+            width: 195px
+        & :nth-child(4)
+            width: 200px
+        & :nth-child(5)
+            width: 180px
+        & :nth-child(6)
+            width: 85px

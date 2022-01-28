@@ -1,0 +1,92 @@
+@import ../style
+
+/* ------ containers ------ */
+
+.container__results
+    font-family: $font-stack
+    color: $grey-dark
+    text-align: center
+    background-color: $light-blue-with
+    font-size: 10px
+
+.container__results--ul
+    cursor: pointer
+    list-style: none
+
+.container--name
+    font-family: $font-stack
+    color: $grey-dark
+    font-weight: 600
+
+/* ------ titles ------ */
+
+.results--title
+    background-color: $grey-ligth
+    padding: 10px
+    padding-top: -50px
+    box-shadow: 0px -2px 50px $grey-ligth
+    text-align: center
+    font-size: 10px
+    & :nth-child(1)
+        color: $grey-dark
+    & :nth-child(2)
+        color: $grey-dark
+
+.title__beach
+    font-family: 'Noto Sans', sans-serif
+    font-weight: bold
+    font-size: 1.4rem
+
+.title--search
+    display: inline-block
+    border: 0.5px solid transparent
+    border-radius: 5px
+
+.title--search:hover
+    border: 0.5px solid $grey-dark
+    background-color: $grey-dark
+    color: $ligth-blue-ligth
+
+.result--beach
+    box-shadow: 0px 1px 10px $ligth-blue-ligth
+    margin: 10px 80px 0 80px
+    background-color: $light-blue-with
+
+/* ------ name beach ------ */
+
+.location--name
+    font-size: 10px
+    color: $grey-medium
+
+/* ------ logo nav ------ */
+
+#logoNav
+    border: none
+    background-color: transparent
+    cursor: pointer
+
+/* ------ lamp ------ */
+
+#lamps
+    width: 1px
+
+@media screen and (min-width: 960px)
+    .container--name
+        font-family: $font-stack
+        color: $grey-dark
+        font-weight: 600
+
+    .result--beach
+        margin: 10px -60px 0 80px
+
+    .iconP
+        cursor: pointer
+
+    .grid
+        display: flex
+        flex-direction: column
+        margin: 10px
+        padding-bottom: 40px
+
+    .results--title
+        text-align: center

@@ -1,0 +1,63 @@
+@import ../style
+
+/* ------- mixins ------ */ 
+
+@mixin format($display: flex, $min-width: 100%, $max-width: 100%, $min-height: 100%, $max-height: 100%, $back: rgba(85, 85, 85, 0.7), $position: absolute, $z-index: 1, $top: 0, $left: 0, $animation: show 0.5s, $animation-fill-mode: forwards)
+    display: $display
+    min-width: $min-width
+    max-width: $max-width
+    min-height: $min-height
+    max-height: $max-height
+    background-color: $back
+    position: $position
+    z-index: $z-index
+    top: $top
+    left: $left
+    animation: $animation
+    animation-fill-mode: $animation-fill-mode
+
+/* ----- Modal ----- */
+
+.modal
+    @include format
+
+.modal__pop-up
+    @include format($back: $light-blue-with, $min-width: 320px, $max-width: 420px, $min-height: auto, $max-height: auto, $position: unset, $z-index: 0)
+    align-items: center
+    justify-content: space-between
+    flex-direction: column
+    height: fit-content
+    margin: auto
+    border: 2px solid $grey-medium
+    border-radius: 7px
+
+.modal__title
+    background-color: white
+    margin-top: 15px
+    font-size: 1.6rem
+    padding: 0.4rem
+    border-radius: 7px
+    color: $grey-dark
+    font-family: 'Noto Sans', sans-serif
+
+.modal__text
+    margin-top: 12px
+    padding: 15px
+    text-align: center
+    font-size: 1.1rem
+    font-family: 'Noto Sans', sans-serif
+
+@keyframes show
+
+    0%
+        opacity: 0
+
+    50%
+        opacity: 1
+
+@keyframes tran
+
+    to
+        transform: translateX(0px) translateY(0px)
+    from
+        transform: translateX(0px) translateY(-30px)

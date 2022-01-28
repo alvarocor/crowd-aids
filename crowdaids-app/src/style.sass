@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Shadows+Into+Light+Two&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap')
+
+* 
+    box-sizing: border-box
+
+
+/* ------ variables ------ */
+
+$font-stack: 'Quicksand', sans-serif
+$font-data-beach: 'Oswald', sans-serif
+$grey-dark: #354037
+$grey-medium: #92A69A
+$grey-ligth: #B3BFAA
+$ligth-blue-ligth: #C1D9CB
+$light-blue-with: #EAF2E4
+
+/* ------- mixins ------- */
+
+@mixin hr-line($hr-heigth: 0.1px, $hr-width: 300px, $hr-back: $grey-ligth, $hr-border: $grey-ligth 0.5px solid)
+    height: $hr-heigth
+    width: $hr-width
+    background-color: $hr-back
+    border: $hr-border
+
+@mixin button-mix($font-family: $font-stack, $margin: 5px, $border: 1px $grey-ligth solid, $back: transparent, $width: 180px, $height: 37px, $color: black, $font-size: 0.9rem, $font-weight: 600, $letter-spacing: 1px, $transition: all 0.3s)
+    font-family: $font-family
+    margin: $margin
+    border: $border
+    background-color: $back
+    width: $width
+    height: $height
+    color: $color
+    font-size: $font-size
+    font-weight: $font-weight
+    letter-spacing: $letter-spacing
+    transition: $transition
+
+
+html, body
+    padding: 0
+    margin: 0
+    border: 0
+
+body
+    height: 100vh
+    background-color: $light-blue-with
+    font-family: $font-stack
+    flex-grow: 1
+
+/* ------ Themes ------ */
+
+.light
+    background-color: $light-blue-with
+    color: $grey-dark
+
+.dark
+    background-color: $grey-dark
+    color: $light-blue-with
+
+/* ------ titles ------ */
+    
+.titles
+    font-family: $font-stack
+    color: $grey-dark
+    font-size: 2rem
+
+hr
+    @include hr-line
+
+/* ------ containers ------- */
+.container
+    display: flex
+    justify-content: center
+    align-items: center
+
+.container--vertical
+    flex-direction: column
+
+.container--search
+    display: flex
+    padding: 5px
+    flex-basis: 10%
+
+.logo
+    display: flex
+    justify-content: center
+    margin: 20px
+
+.logo--image
+    width: 120px
+
+/* ------ form ------- */
+form
+    text-align: center
+    padding: 20px
+    color: white
+    background-color: #F7F7FF
+
+/* ------ labels ----- */
+
+label
+    color: black
+
+/* ------ inputs ------- */
+input
+    height: 37px
+    margin: 5px
+    border: $grey-ligth 1px solid
+    background: transparent
+    outline: none
+    color: black
+    padding: 5px
+    transition: all 0.4s
+    font-family: $font-stack
+    font-size: 1rem
+
+.input--click
+    box-shadow: 1px 1px 5px grey
+
+label > input
+    justify-content: right
+    align-items: right
+
+::placeholder
+    color: grey
+    font-size: 1rem
+
+/* ------ buttons ------- */
+.button
+    font-family: $font-stack
+    margin: 5px
+    border: 1px $grey-ligth solid
+    background-color: transparent
+    width: 180px
+    height: 37px
+    color: black
+    font-size: 0.9rem
+    font-weight: 600
+    letter-spacing: 1px
+    transition: all 0.3s
+
+.button--search
+    @include button-mix($width: 120px)
+
+.button--grey
+    border: $ligth-blue-ligth 1px solid
+    background-color: $ligth-blue-ligth
+    box-shadow: 1px 1px 5px $ligth-blue-ligth
+
+.button--out--form
+    text-align: center
+    background-color: white
+    box-shadow: 1px 1px 5px grey
+
+.button:hover
+    background-color: $grey-ligth
+
+.button--grey:hover
+    border: $ligth-blue-ligth 1px solid
+    background-color: $ligth-blue-ligth
+    box-shadow: 1px 1px 5px $ligth-blue-ligth
+
+.button--modal
+    font-family: $font-stack
+    border: none
+    background-color: transparent
+    width: 120px
+    height: 30px
+    color: $grey-dark
+    font-size: 0.9rem
+    font-weight: 600
+    letter-spacing: 1px
+    transition: all 0.3s
+    text-align: left
+    cursor: pointer
+
+@media screen and (min-width: 960px)
+    .container--search
+        justify-content: space-between
+
+    #input--search
+        width: 400px
+
+    .landing
+        display: flex
+        flex-direction: row
+        justify-content: space-evenly
+        align-items: flex-start
+        margin-top: 100px
+
+    .logo
+        display: inline-block
+
+    .logo--image
+        width: 300px
